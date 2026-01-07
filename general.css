@@ -156,6 +156,7 @@ h1 {
   margin-top: var(--space-md);
   padding-left: var(--space-lg);
   list-style: none;
+  color: var(--color-text-muted)
 }
 
 .rules li {
