@@ -70,6 +70,12 @@ choices.forEach(choice => {
   choiceButtons.push(btn);
 });
 
+function displayName(choice) {
+  return choice === "spock"
+    ? "Spock"
+    : choice;
+}
+
 function play(playerChoice) {
   if (!roundActive) return;
 
@@ -86,7 +92,7 @@ function play(playerChoice) {
   if (playerChoice === computerChoice) {
     outcomeText = "Oavgjort!";
     outcomeIcon = "😕";
-    ruleText = `ni valde båda ${playerChoice}.`;
+    ruleText = `ni valde båda ${displayName(playerChoice)}.`;
   } 
   else if (rules[playerChoice]?.[computerChoice]) {
     // Spelaren vinner
@@ -95,7 +101,7 @@ function play(playerChoice) {
     playerScore++;
 
     const verb = rules[playerChoice][computerChoice];
-    ruleText = `${possessive[playerChoice]} ${playerChoice} ${verb} datorns ${computerChoice}.`;
+    ruleText = `${possessive[playerChoice]} ${displayName(playerChoice)} ${verb} datorns ${displayName(computerChoice)}.`;
   } 
   else {
     // Datorn vinner
@@ -104,9 +110,10 @@ function play(playerChoice) {
     computerScore++;
 
     const verb = rules[computerChoice][playerChoice];
-    ruleText = `datorns ${computerChoice} ${verb} ${possessive[playerChoice]} ${playerChoice}.`;
+    ruleText = `datorns ${displayName(computerChoice)} ${verb} ${possessive[playerChoice]} ${displayName(playerChoice)}.`;
   }
 
+  // Stor bokstav först i meningen
   ruleText = capitalizeFirst(ruleText);
 
   const message = `
@@ -122,6 +129,7 @@ function play(playerChoice) {
   computerScoreSpan.textContent = computerScore;
   resultDiv.innerHTML = message;
 }
+
 
 function toggleChoiceButtons(disabled) {
   choiceButtons.forEach(btn => btn.disabled = disabled);
