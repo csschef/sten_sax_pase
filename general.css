@@ -123,7 +123,7 @@ h1 {
 .rules {
   background: var(--color-card-bg);
   padding: var(--space-md) var(--space-lg);
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-lg);
   max-width: 520px;
   margin: 0 auto var(--space-lg);
   box-shadow: var(--shadow-md);
@@ -177,8 +177,8 @@ h1 {
 
 .score p {
   background: var(--color-card-bg);
-  padding: var(--space-sm) var(--space-md);
-  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
   font-size: var(--font-size-lg);
   min-width: 120px;
@@ -278,7 +278,7 @@ h1 {
 #resetBtn,
 #resetScoreBtn {
   padding: var(--space-md) var(--space-lg);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   border: none;
   font-size: var(--font-size-md);
   cursor: pointer;
