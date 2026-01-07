@@ -1,0 +1,16 @@
+# Ignorera node_modules
+node_modules/
+
+# Ignorera loggar
+*.log
+
+# Ignorera IDE-inställningar
+.vscode/
+.idea/
+
+# Ignorera byggfiler
+dist/
+build/
+
+# Ignorera arkivmapp
+archive/
