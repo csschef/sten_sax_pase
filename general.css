@@ -78,10 +78,10 @@
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
+  font-family: var(--font-main);
 }
 
 body {
-  font-family: var(--font-main);
   background: linear-gradient(
     135deg,
     var(--color-bg-gradient-1),
@@ -284,7 +284,9 @@ h1 {
   padding: var(--space-md) var(--space-lg);
   border-radius: var(--radius-lg);
   border: none;
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  text-transform: uppercase;
   cursor: pointer;
   margin-top: var(--space-sm);
   transition: background var(--transition-fast), transform var(--transition-fast);
